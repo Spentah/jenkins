@@ -42,6 +42,7 @@ public class MainPageTest {
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
         Configuration.browserCapabilities = new ChromeOptions()
                 .addArguments("--remote-allow-origins=*")
+                //TODO разобраться, почему удаленно не стартует браузер. Возможно, придется ебаться с графическим ядром. В headless работает норм
                 .addArguments("--headless") //!!!should be enabled for Jenkins
 //                .addArguments("--no-sandbox")
                 .addArguments("--disable-dev-shm-usage") //!!!should be enabled for Jenkins

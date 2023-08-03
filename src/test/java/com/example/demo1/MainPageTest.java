@@ -40,7 +40,11 @@ public class MainPageTest {
     @BeforeMethod
     public void setUp() {
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
-        Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
+        Configuration.browserCapabilities = new ChromeOptions()
+                .addArguments("--remote-allow-origins=*")
+                .addArguments("--headless") //!!!should be enabled for Jenkins
+                .addArguments("--disable-dev-shm-usage") //!!!should be enabled for Jenkins
+                .addArguments("--window-size=1920x1080");
 //        DriverFactory.setDriver();
         open("https://www.jetbrains.com/");
     }

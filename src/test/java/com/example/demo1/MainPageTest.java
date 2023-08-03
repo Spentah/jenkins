@@ -42,8 +42,8 @@ public class MainPageTest {
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
         Configuration.browserCapabilities = new ChromeOptions()
                 .addArguments("--remote-allow-origins=*")
-//                .addArguments("--headless") //!!!should be enabled for Jenkins
-                .addArguments("--no-sandbox")
+                .addArguments("--headless") //!!!should be enabled for Jenkins
+//                .addArguments("--no-sandbox")
                 .addArguments("--disable-dev-shm-usage") //!!!should be enabled for Jenkins
                 .addArguments("--window-size=1920x1080");
 //        DriverFactory.setDriver();
